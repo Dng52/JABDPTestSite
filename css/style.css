@@ -127,7 +127,6 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    filter: brightness(60%);
 }
 
 /* Carousel Title Images */
@@ -231,10 +230,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.25rem 2rem;
-    background-color: #000; /* Pure black */
-    color: #fff;           /* White text */
+
+    padding: 2.5rem 2rem;
+    background-color: #000;
+    color: #fff;
+
+    width: 100%;
 }
+
 
 .footer-left p {
     font-size: 0.9rem;
