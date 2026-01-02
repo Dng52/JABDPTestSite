@@ -129,6 +129,14 @@
     filter: brightness(60%);
 }
 
+/* Carousel Title Images */
+.carousel-title-image {
+    max-width: 320px;  
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.75rem;
+}
+
 /* Caption Overlay */
 .carousel-caption {
     position: absolute;
