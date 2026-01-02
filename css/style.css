@@ -12,13 +12,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 0.75rem 2rem;
-    background-color: #f57c00; /* Orange */
+    background-color: #f57c00;
 }
 
 /* Logo */
 .logo {
     height: 50px;
-    width: auto;
 }
 
 /* Navigation */
@@ -28,8 +27,9 @@
     gap: 2rem;
 }
 
-.header-nav a,
-.dropbtn {
+/* Nav Links */
+.nav-link {
+    position: relative;
     color: #fff;
     text-decoration: none;
     font-size: 1rem;
@@ -37,6 +37,23 @@
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0.25rem 0;
+}
+
+/* Underline Hover Effect */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
 }
 
 /* Dropdown */
@@ -44,20 +61,31 @@
     position: relative;
 }
 
+/* Hamburger Icon */
+.hamburger {
+    margin-right: 0.4rem;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+/* Dropdown Menu */
 .dropdown-content {
     display: none;
     position: absolute;
     right: 0;
-    top: 100%;
+    top: 120%;
     background-color: #ff9800;
-    min-width: 160px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+    z-index: 10;
 }
 
 .dropdown-content a {
     display: block;
     padding: 0.75rem 1rem;
     color: #fff;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 .dropdown-content a:hover {
