@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Your Studio Name</title>
+    <title>Your Company Name</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header>
-    <div class="logo">Your Studio</div>
-    <nav>
+<header class="site-header">
+    <div class="header-left">
+        <img src="images/logo.png" alt="Company Logo" class="logo">
+    </div>
+
+    <nav class="header-nav">
         <a href="#about">About Us</a>
 
         <div class="dropdown">
@@ -23,67 +26,6 @@
         </div>
     </nav>
 </header>
-
-<main>
-    <section class="carousel">
-        <div class="carousel-track">
-
-            <div class="carousel-slide active">
-                <img src="images/game1.jpg" alt="Game One">
-                <div class="carousel-content">
-                    <h2>Game One</h2>
-                    <p>A fast-paced sci-fi adventure with deep strategy.</p>
-                    <a href="games/game1.html" class="btn">View Game</a>
-                </div>
-            </div>
-
-            <div class="carousel-slide">
-                <img src="images/game2.jpg" alt="Game Two">
-                <div class="carousel-content">
-                    <h2>Game Two</h2>
-                    <p>Explore unknown worlds and uncover alien secrets.</p>
-                    <a href="games/game2.html" class="btn">View Game</a>
-                </div>
-            </div>
-
-            <div class="carousel-slide">
-                <img src="images/game3.jpg" alt="Game Three">
-                <div class="carousel-content">
-                    <h2>Game Three</h2>
-                    <p>A tactical multiplayer experience built for competition.</p>
-                    <a href="games/game3.html" class="btn">View Game</a>
-                </div>
-            </div>
-
-        </div>
-
-        <button class="carousel-btn prev">‹</button>
-        <button class="carousel-btn next">›</button>
-    </section>
-</main>
-
-<footer>
-    <a href="https://twitter.com" target="_blank">Twitter</a>
-    <a href="https://instagram.com" target="_blank">Instagram</a>
-    <a href="https://youtube.com" target="_blank">YouTube</a>
-</footer>
-
-<script>
-    const slides = document.querySelectorAll('.carousel-slide');
-    let currentIndex = 0;
-
-    document.querySelector('.next').addEventListener('click', () => {
-        slides[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % slides.length;
-        slides[currentIndex].classList.add('active');
-    });
-
-    document.querySelector('.prev').addEventListener('click', () => {
-        slides[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-        slides[currentIndex].classList.add('active');
-    });
-</script>
 
 </body>
 </html>
