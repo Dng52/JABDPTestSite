@@ -1,9 +1,21 @@
-/* Reset */
+/* Reset & Base */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background-color: #000; /* Full black background */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Makes content grow to push footer down */
 }
 
 /* Header */
@@ -95,17 +107,17 @@
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 /* Carousel Section */
 .carousel {
     width: 100%;
-    background-color: #000;
     position: relative;
 }
 
 .carousel-container {
     position: relative;
     width: 100%;
-    aspect-ratio: 1920 / 825;
+    aspect-ratio: 1920 / 825; /* Keeps correct height for hero images */
     overflow: hidden;
 }
 
@@ -150,22 +162,15 @@
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-/* Animate caption when slide is active */
 .carousel-slide.active .carousel-caption {
     opacity: 1;
     transform: translateY(0);
-}
-
-.carousel-caption h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
 }
 
 .carousel-caption p {
     margin-bottom: 1rem;
     line-height: 1.4;
 }
-
 
 /* Button */
 .carousel-btn {
@@ -225,26 +230,23 @@
 .dot.active {
     background-color: #fff;
 }
+
 /* Footer */
 .site-footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    padding: 2.5rem 2rem;
+    padding: 2.5rem 2rem; 
     background-color: #000;
     color: #fff;
-
     width: 100%;
 }
-
 
 .footer-left p {
     font-size: 0.9rem;
     color: #fff;
 }
 
-/* Social Icons */
 .footer-right {
     display: flex;
     gap: 1.25rem;
@@ -253,7 +255,7 @@
 .footer-right a img {
     width: 22px;
     height: 22px;
-    filter: invert(1); /* Keeps icons white */
+    filter: invert(1);
     opacity: 0.85;
     transition: opacity 0.2s ease, transform 0.2s ease;
 }
@@ -262,5 +264,3 @@
     opacity: 1;
     transform: translateY(-2px);
 }
-
-
